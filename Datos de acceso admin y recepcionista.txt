@@ -1,0 +1,23 @@
+Para ingresar como administrador
+correr el proyecto en la parte superior dice login:
+
+
+Administrador
+
+Email:
+bombleex@gmail.com
+password:
+123456789
+
+para realizar Reserva , registro de huesped y generar factura ingrese como
+
+Recepcinista:
+email:
+gg@gmail.com
+password
+1234567890
+
+
+
+El administrador puede agregar mas recepcinistas
+
