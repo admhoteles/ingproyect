@@ -16,6 +16,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -77,18 +87,35 @@
                                                         
                                                     %>
                                                     
-							<div class="col-lg-3 col-md-4 col-sm-6">
-                                                            <strong>Cuarto <%=c1.getId()%></strong> <em><%=c1.getEstado()%></em><br>
-                                                            <strong>tipo</strong> <%=c1.getTipo()%>
-                                                            <svg class="glyph stroked app-window"> <IMG SRC="<%=c1.getFoto()%>" WIDTH=200 HEIGHT=200></svg>
-								
-                                                               
-                                                            
-                                                           <pre> <button type="submit" class="btn btn-success btn-lg">ver info</button></pre>
-                                                     
-                                                           <p><input type="hidden"  name="id" value="<%=c1.getId()%>"></p>
-							</div>
+							 <div class="col s12 m4">
+               
+          <div class="card">
+            <div class="card-image">
+              <img src="<%=c1.getFoto()%>">
+              <span class="card-title">Cuarto <%=c1.getId()%></span>
+            </div>
+            <div class="card-content">
+              <p><p>Cuarto de tipo <%=c1.getTipo()%></p>.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Ver informacion</a>
+            </div>
+          </div>
+        	
+            
+           
+            
+            
                                                          
+                                                         </div>
+            
+            
+            
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
 							  
 
 							<%}%>
@@ -158,5 +185,8 @@
      response.sendRedirect("login.jsp"); 
  }
 %>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="material/js/materialize.min.js"></script>
 </body>
 </html>
