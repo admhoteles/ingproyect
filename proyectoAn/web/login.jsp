@@ -14,9 +14,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forms</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+
+
+ 
+    <link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700'>
+
+        <link rel="stylesheet" href="login/css/style.css">
+
+
+
+
+ 
+
+
 
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -53,45 +64,26 @@
 	
                             
                           
-                           
-                            
-                            <div class="row">
-		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-			<div class="login-panel panel panel-default">
-                            
-				<div class="panel-heading">Hotel Admin</div>
-				<div class="panel-body">
+                         
 					
-						<fieldset>
-                                                    <form action="login.jsp" method="POST">
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        <div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
-							</div>
-							<div class="form-group">
-								<input class="form-control" placeholder="Password" name="password" type="password" value="">
-							</div>
-							<div class="checkbox">
-								<label>
-									<input name="remember" type="checkbox" value="Remember Me">Remember Me
-								</label>
-							</div>
-                                                        
-							
-                                                         <input type="submit" value="Acceder" class="btn btn-primary" min="0"/>
-                                                    </form>
-							
-						</fieldset>
+					
+  <div class='form animated flipInX'>
+  <h2>Ingrese sus Datos</h2>
+  <form action="login.jsp" method="POST">
+    <input  name="email" placeholder='Username' type='text'>
+    <input  name="password" placeholder='Password' type='password'>
+    <button class='animated infinite pulse'>Login</button>
+  </form>
+
+
+                        
+                                    
                                     
                                     <% if(emplogin==null&&email!=null&&password!=null){
                                     
                                     %>
                                     <p>opps clave  o usario incorrectos</p>
+                                    </div>
 					<%}
                                         
                                         
@@ -117,30 +109,11 @@
 	
 		
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
         
-        
-	<script>
-		!function ($) {
-			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
-				$(this).find('em:first').toggleClass("glyphicon-minus");	  
-			}); 
-			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-		}(window.jQuery);
+         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-		$(window).on('resize', function () {
-		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-		})
-		$(window).on('resize', function () {
-		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-		})
-	</script>	
+        <script src="login/js/index.js"></script>
+
 </body>
 
 </html>
