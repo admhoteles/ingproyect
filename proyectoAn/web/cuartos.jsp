@@ -4,6 +4,7 @@
     Author     : macaco
 --%>
 
+<%@page import="co.ufps.edu.dto.TipoHabitacion"%>
 <%@page import="co.ufps.edu.dto.Reserva"%>
 <%@page import="co.ufps.edu.dto.empleado"%>
 <%@page import="co.ufps.edu.dto.habitaciones"%>
@@ -91,14 +92,29 @@
                
           <div class="card">
             <div class="card-image">
-              <img src="<%=c1.getFoto()%>">
+              <img  src="<%=c1.getFoto()%>">
               <span class="card-title">Cuarto <%=c1.getId()%></span>
             </div>
             <div class="card-content">
-              <p><p>Cuarto de tipo <%=c1.getTipo()%></p>.</p>
+                
+                               
+
+              <p><p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+
+Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+
+Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+
+Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>.</p>
             </div>
             <div class="card-action">
-              <a href="#">Ver informacion</a>
+           <button type="submit" class="btn btn-success btn-lg">ver info</button>
+                                                     
+                                                           <p><input type="hidden"  name="id" value="<%=c1.getId()%>"></p>
             </div>
           </div>
         	

@@ -23,7 +23,9 @@
         
 
         
-        
+             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css"  media="screen,projection"/>
         
         
         
@@ -238,74 +240,43 @@
      
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    
+
         <h4 class="modal-title" id="myModalLabel">Llenar informacion del Huesped</h4>
-      </div>
-      <div class="modal-body">
+     
+     
         <form  action="registrado.jsp" method="post">
 
             
       
       
       
-     <div class="form-group">
-                  <label>Cedula</label>
+  
+                 
                   <input class="form-control" placeholder="Cedula" name="cedula" required>
-                </div>
+               
       
-      
-      
-      
-      
-      <div class="form-group">
-                  <label>Nombre</label>
                   <input class="form-control" placeholder="Nombre" name="nombre" required>
-                </div>
+               
       
-      
-      
-      
-      <div class="form-group">
-                  <label>Apellidos</label>
                   <input class="form-control" placeholder="Apellidos" name="apellidos" required>
-                </div>
+              
       
-      
-      <div class="form-group">
-                  <label>Direccion</label>
                   <input class="form-control" placeholder="Direccion" name="direccion" required>
-                </div>
+              
       
-      
-      
-      <div class="form-group">
-                  <label>Telefono</label>
                   <input class="form-control" placeholder="Telefono" name="telefono" required>
-                </div>
+               
       
       
       
-      
-      <div class="form-group">
-                  <label>pasaporte</label>
                   <input class="form-control" placeholder="Pasaporte" name="pasaporte" required>
-                </div>
+             
       
-      
-      
-                                        <div class="form-group">
-                  <label>Procedencia</label>
                   <input class="form-control" placeholder="Procedencia" name="procedencia" required>
-                </div>
-      
-      <div class="form-group">
-                  <label>Nacionalidad</label>
+              
                   <input class="form-control" placeholder="Nacionalidad" name="nacionalidad" required>
-                </div>
+            
 
                    
 
@@ -314,14 +285,14 @@
 
 
        
-      </div>
+ 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       <input type="submit" value="Registrar" class="btn btn-info" min="0"/>
       </div>
         
          </form>
-    </div>
+    
   </div>
 </div>
         
@@ -334,6 +305,8 @@
 		</div><!-- /.row -->
 		
 	</div><!--/.main-->
+         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="material/js/materialize.min.js"></script>
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

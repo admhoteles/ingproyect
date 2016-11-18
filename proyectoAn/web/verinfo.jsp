@@ -19,6 +19,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
+        
+         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        
         <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/datepicker3.css" rel="stylesheet">
 <link href="css/bootstrap-table.css" rel="stylesheet">
@@ -84,40 +93,113 @@
 <!--/.row-->		
 		
 		
-		<div class="row">
-			<div class="col-lg-12">
+<div class="row">
+    
+    
+    
+    		<div class="col-md-3 col-md-offset-3">
 				<h2>Cuarto  <%=h.getId()%></h2>
+                                
 			</div>
+      
+</div>
+	
 			
 			
-			<div class="col-md-6">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						Descripcion
-					</div>
-					<div class="panel-body">
-						<p>Tipo = <%=tipo.getNombre()%>  </p>
-                                                <p>Estado = <%=estado.getDescriccion()%>  </p>
-                                                 <p>precio Base = <%=tipo.getPreciobase()%>  </p>
-                                                 
-                                                 
-                                                 <p>usted se piensa quedar desde = <%=calendar.getTime()%>   </p>
-					</div>
-				</div>
-			</div>
-<div class="col-md-6">
-	<div class="panel panel-primary">
-            <form action="buscar.jsp" method="POST">
+			<div class="col-lg-12">
+				
+                                      
+                                                
+                                                
+                                                 <div class="card">
+            <div class="card-image">
+              <img  src="<%=h.getFoto()%>">
+              <span class="card-title">Cuarto <%=h.getId()%></span>
+              
+            </div>
+            <div class="card-content">
+                
+                               
+
+              <p><p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+
+Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+
+Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+
+Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>.</p>
+            </div>
+            <div class="card-action">
+                                <form action="buscar.jsp" method="POST">
 			<div class="panel-body">
                              <input type="hidden" name="idcuartoselecionado" value="<%=h.getId()%>">
-						<button type="submit" class="btn btn-success btn-lg">Reservar</button>
+						<button type="submit" class="btn btn-success btn-lg col-md-3 col-md-offset-3">Reservar</button>
+                                                              <a class="col-md-3 col-md-offset-3 btn-floating btn-large waves-effect waves-light red" data-toggle="modal" data-target="#myModal"><i class="material-icons">add</i></a>
 					</div>
                  </form>
+                                                                        
+                                
+                          
+               
+
+           
+                             
+            </div>
+                                                
+              
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                    
+     <div class="modal-dialog" role="document">
+         <h1>Mas imagenes del cuarto</h1>
+         
+         <img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="250" src="<%=h.getFoto()%>" width="100" height="200">
+      
+         
+         
+         
+         
+     
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+       
+         </div>
+      
+   
+    <!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->                               
+                                                    
+                                                </div>
+                                                
+                                                
+                                                
+                                                
+          </div>
+                                                
+                                                		<div class="center-block">
+                            <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header center-block"><h3>Servicios</h3></div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+   
+  </ul>
+      </div>
+                                                
 				</div>
-			</div>
+			
+
 		
 			
-		</div><!-- /.row -->
+		<!-- /.row -->
 			
 		
 		
@@ -126,71 +208,23 @@
 		
 		
 			
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>imagenes del cuarto</h2>
-			</div>
-			
-			<div class="col-md-6">
-				<div class="panel panel-default">
-					<div class="panel-body tabs">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
-							<li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
-							<li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
-						</ul>
 		
-						<div class="tab-content">
-							<div class="tab-pane fade in active" id="tab1">
-								<h4>Imagen 1</h4>
-                                                                <IMG SRC="<%=h.getFoto()%>" WIDTH=200 HEIGHT=200>
-							</div>
-							<div class="tab-pane fade" id="tab2">
-								<h4>Imagen 2</h4>
-								<IMG SRC="<%=h.getFoto()%>" WIDTH=200 HEIGHT=200>
-							</div>
-							<div class="tab-pane fade" id="tab3">
-								<h4>imagen 3</h4>
-								<IMG SRC="<%=h.getFoto()%>" WIDTH=200 HEIGHT=200>
-							</div>
-						</div>
-					</div>
-				</div><!--/.panel-->
-			</div><!--/.col-->
 			
-			<div class="col-md-6">
-                            <h2>Servicios del cuarto</h2>
-				<div class="panel panel-default">
-					<div class="panel-body tabs">
-					
-						<ul class="nav nav-pills">
-							<li class="active"><a href="#pilltab1" data-toggle="tab">Servicio 1</a></li>
-							<li><a href="#pilltab2" data-toggle="tab">Servicio 2</a></li>
-							<li><a href="#pilltab3" data-toggle="tab">Servicio 3</a></li>
-						</ul>
-		
-						<div class="tab-content">
-							<div class="tab-pane fade in active" id="pilltab1">
-								<h4>Servicio 1</h4>
-								<p>Aire acondicionado</p>
-							</div>
-							<div class="tab-pane fade" id="pilltab2">
-								<h4>Servicio 2</h4>
-								<p>Ventilador </p>
-							</div>
-							<div class="tab-pane fade" id="pilltab3">
-								<h4>Servicio 3</h4>
-								<p>Nevera </p>
-							</div>
-						</div>
-					</div>
-				</div><!--/.panel-->
-			</div><!-- /.col-->
 			
-		</div><!-- /.row -->
+                  
+			
+	
+                            <!--/.panel-->
+			<!-- /.col-->
+			
+		<!-- /.row -->
 		
 	</div><!--/.main-->
+        
+           <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="material/js/materialize.min.js"></script>
 
+     
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
@@ -213,6 +247,9 @@
 		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 		})
 	</script>
+        
+      
+        
     <%}%>   
 </body>	
     </body>
