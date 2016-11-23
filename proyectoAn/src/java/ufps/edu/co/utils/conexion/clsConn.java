@@ -22,10 +22,10 @@ import java.util.logging.Logger;
 
 public class clsConn implements Serializable{
     ResultSet res=null;
-    private Connection con= null;
+    private static Connection con= null;
     Statement st=null;
     String driver="org.postgresql.Driver";
-    String url="jdbc:postgresql://localhost:5432/finalp";
+    String url="jdbc:postgresql://localhost:5432/pyecton";
     String userDB="postgres";
     String passDB="macaco123";
 
@@ -35,6 +35,8 @@ public class clsConn implements Serializable{
     public int conectar(){
         try{
             Class.forName(driver);
+            
+            System.out.println("Las conexiones biene de edinson");
         }
         catch (ClassNotFoundException e){
             System.out.println("No se pudo cargar el driver :-( "+driver);
@@ -42,6 +44,9 @@ public class clsConn implements Serializable{
 
         }
         try{
+            if(con!=null){
+                return 1;
+            }
             con=DriverManager.getConnection(url,userDB,passDB);
         }
         catch(SQLException e){
@@ -885,6 +890,7 @@ public StringBuffer Lista(String tabla, int col)
      * @return the con
      */
     public Connection getCon() {
+        
         return con;
     }
 }

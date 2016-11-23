@@ -23,7 +23,7 @@ public class Conexion {
 	long tiempo_inicio = -1;
   	long tiempo_total = 0;
   	
-  	private final static String url ="jdbc:postgresql://localhost:5432/finalp";//local
+  	private final static String url ="jdbc:postgresql://localhost:5432/pyecton";//local
 	private String usuario="postgres";	
 	private String password="macaco123";
 	private final static String driver = "org.postgresql.Driver";			
@@ -72,11 +72,19 @@ public class Conexion {
 	 * @throws java.sql.SQLException
 	 */
 	public Connection conectar(String conectaDesde) throws java.sql.SQLException
-	{						
+	{	if(this.con!=null){
+            return this.con;
+            
+        
+            
+            
+        }					
 		try
 		{
 			Class.forName(driver);
 			this.con = DriverManager.getConnection(url,usuario,password);
+                        
+                        System.out.println("Abrio una conexion ");
                   
 		
 		}
