@@ -24,9 +24,12 @@ import ufps.edu.co.utils.conexion.clsConn;
 public class ReservaDAO {
     
     private Conexion conexion;
-    private clsConn cnn=new clsConn();
+    private clsConn cnn;
     
     public clsConn getCnn() {
+         if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
      public Reserva crearReserva(Reserva reserva){
@@ -98,9 +101,13 @@ public class ReservaDAO {
                 
                Reserva r=new Reserva() ;
 		try {
-			if(conexion==null) conexion= new Conexion();
-			if(conexion.getConnection()==null) con = conexion.conectar("");
-			else con= conexion.getConnection();
+				if(conexion==null){
+                            conexion= new Conexion();
+                }
+			if(conexion.getConnection()==null) {
+                            con = conexion.conectar("");
+                        }
+                        else{ con= conexion.getConnection();}
 			String sql = "SELECT * FROM reserva where id_hab=? and estado=1";
 			ps = con.prepareStatement(sql);
                        ps.setInt(1,numhab);
@@ -136,16 +143,37 @@ public class ReservaDAO {
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            
+            //con.close();
+            //conexion.cerrarConexion();
+            
+           
+            conexion.getConnection().close();
+            
+          
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
                 
                 return r;
@@ -203,16 +231,30 @@ public class ReservaDAO {
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
                 
                 return r;

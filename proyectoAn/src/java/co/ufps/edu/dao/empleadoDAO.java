@@ -22,8 +22,8 @@ import ufps.edu.co.utils.conexion.clsConn;
  * @author EDINSON
  */
 public class empleadoDAO {
- private clsConn cnn=new clsConn();
-    private Conexion conexion;
+ private clsConn cnn;
+    private Conexion conexion=new Conexion();
  public empleadoDAO() {
     }
     
@@ -141,6 +141,9 @@ System.out.println(sql);
     
  }
     public clsConn getCnn() {
+         if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     } 
      public String cargos(){
@@ -165,15 +168,16 @@ System.out.println(sql);
                 String passwordencriptada=DigestUtils.sha1Hex(emp.getContraseña());
 		try {
 			
-			if(conexion==null) conexion= new Conexion();
-			if(conexion.getConnection()==null) con = conexion.conectar("");
-			else con= conexion.getConnection();
+			con=conexion.conectar("");
+                        
+			
 			String sql = "SELECT * FROM empleados "
 					+    "WHERE email = ? ";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, emp.getEmail());
                        
 			rst = ps.executeQuery();
+                        
 			
 			if(rst.next()){
                             if(!passwordencriptada.equalsIgnoreCase(rst.getString("password"))){
@@ -192,24 +196,43 @@ System.out.println(sql);
                             emp=null;
                         }
 			
+                        
+                        
 		} catch (Exception e) {
                     System.out.println("error "+e.toString());
 			e.printStackTrace();
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
-						
+			
+                    
+                    
+                    
+                     if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        
+         
+conexion.cerrarConexion();                 
+
+                    
+                    
+		}
+    
+    
 			ps=null;
 			con=null;
+                        rst=null;
                         
-		}
+                }
                 return emp;
          
      }

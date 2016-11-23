@@ -18,7 +18,7 @@ import ufps.edu.co.utils.conexion.clsConn;
  * @author EDINSON
  */
 public class estado_reservaDAO {
- private clsConn cnn=new clsConn();
+ private clsConn cnn;
     
     public estado_reservaDAO() {
     }
@@ -99,6 +99,9 @@ public class estado_reservaDAO {
         return (tabla);
    }
      public clsConn getCnn() {
+          if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
 }

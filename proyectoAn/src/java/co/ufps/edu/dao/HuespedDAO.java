@@ -22,7 +22,7 @@ import ufps.edu.co.utils.conexion.clsConn;
  */
 public class HuespedDAO {
     private Conexion conexion;
-    private clsConn cnn=new clsConn();
+    private clsConn cnn;
     
     //si no hay problema se retorna null si no se retorna un objeto
     public Huesped CreateHuesped(Huesped huesped){
@@ -60,16 +60,26 @@ public class HuespedDAO {
 			
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				
-			}
+	
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                     
 		}
                 return huesped;
         
@@ -104,16 +114,30 @@ public class HuespedDAO {
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
                         
 		}
                 return var;
@@ -156,16 +180,30 @@ public class HuespedDAO {
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
                 
                 return huespeds;
@@ -208,16 +246,30 @@ public class HuespedDAO {
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+		        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
                 
                 return huespeds;
@@ -306,6 +358,9 @@ public class HuespedDAO {
      return "";
      }
      public clsConn getCnn() {
+         if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
 }

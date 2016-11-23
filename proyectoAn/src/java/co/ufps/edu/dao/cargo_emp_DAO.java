@@ -22,7 +22,7 @@ public class cargo_emp_DAO {
     public cargo_emp_DAO() {
     }
     
-     private clsConn cnn=new clsConn();
+     private clsConn cnn;
 public String insertar (cargo_empleado cargo){
         String msm="error";
        ResultSet res= getCnn().consultaTabla("select max(id)+1 from cargoempleado;");
@@ -100,6 +100,9 @@ public String insertar (cargo_empleado cargo){
    }
 
 public clsConn getCnn() {
+     if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
 }

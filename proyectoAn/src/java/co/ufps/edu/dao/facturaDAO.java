@@ -61,16 +61,26 @@ public class facturaDAO {
 			
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				
-			}
+	
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                       
 		}
                 return factu;
         

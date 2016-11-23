@@ -18,7 +18,7 @@ import ufps.edu.co.utils.conexion.clsConn;
  * @author EDINSON
  */
 public class estado_habDAO {
-    private clsConn cnn=new clsConn();
+    private clsConn cnn;
 
     public estado_habDAO() {
     }
@@ -99,6 +99,9 @@ public class estado_habDAO {
         return (tabla);
    }
     public clsConn getCnn() {
+         if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
 }

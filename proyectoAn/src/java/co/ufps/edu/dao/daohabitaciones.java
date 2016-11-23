@@ -30,8 +30,8 @@ int id;
 int tipo;
 int estado;
 String foto;
-private clsConn cnn=new clsConn();
-private Conexion conexion;
+private clsConn cnn;
+private Conexion conexion=new Conexion();
         
 
     public daohabitaciones() {
@@ -142,6 +142,9 @@ return false;
     }
            
  public clsConn getCnn() {
+      if (cnn==null){
+             cnn=new clsConn();
+         }
         return cnn;
     }
  public void eliminar(int id){
@@ -186,9 +189,11 @@ public List<habitaciones>listarh(){
                 habitaciones h ;
 		try {
 			
-			if(conexion==null) conexion= new Conexion();
-			if(conexion.getConnection()==null) con = conexion.conectar("");
-			else con= conexion.getConnection();
+		
+			
+                            con = conexion.conectar("");
+                        
+                       
                         //solo habitaciones disponibles
 			String sql = "SELECT * FROM  habitaciones where  estado=2";
 				
@@ -204,6 +209,7 @@ public List<habitaciones>listarh(){
                                h.setFoto(rst.getString("foto"));
                                h.setId(rst.getInt("id_hab"));
                                h.setTipo(rst.getInt("tipo"));
+                               h.setObservacion(rst.getString("Observacion"));
                                
                                
 			habitacion.add(h);
@@ -216,21 +222,44 @@ public List<habitaciones>listarh(){
 			
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+       
+            
+            //con.close();
+            //conexion.cerrarConexion();
+            
+           
+            conexion.cerrarConexion();
+            
+          
+     
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
-        return habitacion;
         
         
+        
     }
+                
+                return habitacion;
+}
      
     public habitaciones buscarh(int id){
      
@@ -240,7 +269,7 @@ public List<habitaciones>listarh(){
                 habitaciones  h =new habitaciones();
 		try {
 			
-			if(conexion==null) conexion= new Conexion();
+			
 			if(conexion.getConnection()==null) con = conexion.conectar("");
 			else con= conexion.getConnection();
 			String sql = "SELECT * FROM habitaciones "
@@ -255,6 +284,7 @@ public List<habitaciones>listarh(){
                                h.setFoto(rst.getString("foto"));
                                h.setId(rst.getInt("id_hab"));
                                h.setTipo(rst.getInt("tipo"));
+                              h.setObservacion(rst.getString("Observacion"));
                                
 			}else{
                             h=null;
@@ -266,16 +296,30 @@ public List<habitaciones>listarh(){
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
                         
 		}
                 return h;
@@ -349,9 +393,9 @@ public List<habitaciones>listarh(){
                
 		try {
 			
-			if(conexion==null) conexion= new Conexion();
-			if(conexion.getConnection()==null) con = conexion.conectar("");
-			else con= conexion.getConnection();
+			
+			con= conexion.conectar("");
+			
 			String sql = "SELECT * FROM habitaciones "
 					+    "WHERE id_hab = id ";
 			ps = con.prepareStatement(sql);
@@ -380,16 +424,33 @@ public List<habitaciones>listarh(){
 			conexion.escribirLogs("UsuarioDao", "registrarUsuario", e.toString());
                        
 		} finally {
-			try {
-				ps.close();
-				con.close();
-			} catch (SQLException e2) {
-				e2.printStackTrace();
-				conexion.escribirLogs("UsuarioDao", "registrarUsuario", e2.toString());
-			}
+			        if (rst != null) {
+        try {
+            rst.close();
+          
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (ps != null) {
+        try {
+            ps.close();
+        } catch (SQLException e) { /* ignored */}
+    }
+    if (con != null) {
+        try {
+            con.close();
+            conexion.cerrarConexion();
+            
+        } catch (SQLException e) { /* ignored */}
+    }
+                    
+                    
+                    
+                    
+                    
 						
 			ps=null;
 			con=null;
+                        rst=null;
     }
                 
                 return h;
