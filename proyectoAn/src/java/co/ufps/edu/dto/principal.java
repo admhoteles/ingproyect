@@ -15,8 +15,11 @@ public class principal {
     String nombre;
     String slogan;
     int tel;
-    int cel;
+    long cel;
     String dir;
+    String vision;
+    String mision;
+    String obj;
    
 
     public principal() {
@@ -47,11 +50,11 @@ public class principal {
         this.tel = tel;
     }
 
-    public int getCel() {
+    public long getCel() {
         return cel;
     }
 
-    public void setCel(int cel) {
+    public void setCel(long cel) {
         this.cel = cel;
     }
 
@@ -61,6 +64,30 @@ public class principal {
 
     public void setDir(String dir) {
         this.dir = dir;
+    }
+
+    public String getVision() {
+        return vision;
+    }
+
+    public String getMision() {
+        return mision;
+    }
+
+    public String getObj() {
+        return obj;
+    }
+
+    public void setVision(String vision) {
+        this.vision = vision;
+    }
+
+    public void setMision(String mision) {
+        this.mision = mision;
+    }
+
+    public void setObj(String obj) {
+        this.obj = obj;
     }
 
     @Override

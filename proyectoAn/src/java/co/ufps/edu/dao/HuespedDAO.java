@@ -275,23 +275,23 @@ public class HuespedDAO {
                 return huespeds;
     
 }
-      public String todoslosHuespedes() throws SQLException{
+       public String todoslosHuespedes() throws SQLException{
          String sql="select id,nombres, apellidos,cedula,direccion,telefono,nacionalidad,pasaporte,procedencia from huesped;";
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
                                "<tr>\n" +
-                                "<th class=\"col text-center\">Identificacion</th>\n" +
-                                "<th class=\"col text-center\">Nombres</th>\n" +
-               "<th class=\"col text-center\">Apellidos</th>\n" +     
-               "<th class=\"col text-center\">Cedula</th>\n" +
-               "<th class=\"col text-center\">Dirección</th>\n" +
-               "<th class=\"col text-center\">Telefono</th>\n" +
-              "<th class=\"col text-center\">Nacionalidad</th>\n" +
-               "<th class=\"col text-center\">Pasaporte</th>\n" +
-               "<th class=\"col text-center\">Procedencia</th>\n" +
-                                "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\" text-center\" Style=\"background-color:  #ee9d73; color: white;\">Identificacion</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Nombres</th>\n" +
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Apellidos</th>\n" +     
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Cedula</th>\n" +
+               "<th class=\"col45 text-center\"Style=\"background-color:  #ee9d73; color: white;\">Dirección</th>\n" +
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Telefono</th>\n" +
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Nacionalidad</th>\n" +
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Pasaporte</th>\n" +
+               "<th class=\"col45 text-center\" Style=\"background-color:  #ee9d73; color: white;\">Procedencia</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        

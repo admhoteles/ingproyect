@@ -77,7 +77,7 @@ public class estado_habDAO {
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
-                               "<tr>\n" +
+                               "<tr Style=\"background-color:  #ee9d73; color: white;\">\n" +
                                 "<th class=\"col text-center\">Identificacion</th>\n" +
                                 "<th class=\"col text-center\">Descripcion</th>\n" +
                                 "<th class=\"col text-center\">Acciones</th>\n" +

@@ -64,10 +64,10 @@ if(exe!=null){msm=exe.getMessage();}
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\"><thead>";
-                               tabla+= "<tr><th class=\"col text-center\">Tipo </th>" +
+                               tabla+= "<tr><th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Tipo </th>" +
                                 
-                                "<th class=\"col text-center\">Propiedad</th>\n" +
-                                "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Propiedad</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        

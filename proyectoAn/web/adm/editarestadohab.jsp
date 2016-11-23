@@ -74,8 +74,8 @@
 								
 								<!-- Form actions -->
 								<div class="form-group">
-									<div class="col-md-12 widget-right btn btn-danger">
-										<button type="submit" class="btn btn-info btn-md pull-right">Guardar</button>
+									<div class="col-md-12 widget-right">
+										<button type="submit" class="btn btn-deep-orange btn-md pull-right">Guardar</button>
 									</div>
 								</div>
 							</fieldset>
@@ -102,13 +102,24 @@
  
 		  
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+	 <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/tether.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/material.js"></script>
+        <!--<script src="js/materialize.js"></script>
+
+        <script src="js/chart.min.js"></script>
+        <script src="js/chart-data.js"></script>
+        <script src="js/easypiechart.js"34></script>
+        <script src="js/easypiechart-data.js"></script>
+       
+        <!--<script src="js/material.js"></script>??????-->
+        <script src="js/ripples.js"></script>
+         <script src="js/bootstrap-datepicker.js"></script>
+        <script>function index() {
+           $.material.init();
+        }</script>
 	<script>
 		
 

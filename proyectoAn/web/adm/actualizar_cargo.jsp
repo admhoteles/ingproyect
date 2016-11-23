@@ -10,7 +10,7 @@
 <%
     
     String name=request.getParameter("name");
-    System.out.println(" **** "+name);
+  
     datos.setNombre(name);
     cargo.actualizar(datos);
    response.sendRedirect("datos_cargo.jsp");

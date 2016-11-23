@@ -81,7 +81,7 @@ h3, h4 {
 }
 
 .form-control:focus {
-	border: 1px solid #30a5ff;
+	
 	outline: 0;
 	box-shadow: inset 0px 0px 0px 1px #30a5ff;
 }
@@ -95,7 +95,7 @@ h3, h4 {
 }
 
 .navbar-header .navbar-brand span {
-	color: #30a5ff;
+	color: #6bb2b1;
 }
 
 /*Buttons*/
@@ -158,8 +158,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-	background-color: #30a5ff;
-	border-color: #30a5ff;
+	background-color: #ee9d73;
+	border-color: #e98e4c;
 }
 
 .btn-success,
@@ -422,7 +422,7 @@ a.bg-danger:hover {
 	color: #5f6468;
 }
 
-.panel-blue .widget-left { background: #30a5ff; color: #fff; }
+.panel-blue .widget-left { background: #e98e4c ; color: #fff; }
 .panel-teal .widget-left { background: #1ebfae; color: #fff; }
 .panel-orange .widget-left { background: #ffb53e; color: #fff; }
 .panel-red .widget-left { background: #f9243f; color: #fff; }
@@ -929,7 +929,12 @@ h1.page-header {
 	overflow: scroll;
 }
 .col{
-    background-color: #30a5ff;
+    background-color:  #ee9d73;
+   
+}
+.col45{
+    background-color:  #ee9d73;
+   
 }
 
 

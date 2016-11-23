@@ -56,10 +56,9 @@ public class propiedadeshabDAO {
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
                                "<tr>\n" +
-                                "<th class=\"col text-center\">Identificacion</th>\n" +
-                                "<th class=\"col text-center\">Nombre de la propiedad</th>\n" +
-                                "<th class=\"col text-center\">Incremento</th>\n" +
-                                "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Identificacion</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Nombre de la propiedad</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        
@@ -67,7 +66,7 @@ public class propiedadeshabDAO {
                 tabla+="<tr >";
                               tabla+="<td class=\"text-center\">"+msm.getInt(1)+"</td>";
                               tabla+="<td class=\"text-center\">"+msm.getString(2)+"</td>";
-                              tabla+="<td class=\"text-center\">"+msm.getString(3)+"</td>";
+                              //tabla+="<td class=\"text-center\">"+msm.getString(3)+"</td>";
                               tabla+="<td class=\"text-center\">"+"<form class=\"form-horizontal\" action=\"eliminar.jsp\" method=\"post\"><input type=\"hidden\" name=\"id\" value=\""+msm.getInt(1)+"\" ><input type=\"hidden\" name=\"tabla\" value=\"prophab\" ><button type=\"warning\" class=\"btn btn-danger btn-xs\"<a type=\"hidden\" onclick=\"return confirm('Seguro de eliminar?');\"></a>Eliminar</button></form>"
                                       +"<form class=\"form-horizontal\" action=\"editarpropiedadeshab.jsp\" method=\"post\"> <input type=\"hidden\" name=\"id\" value=\""+msm.getInt(1)+"\" ><input type=\"hidden\" name=\"name\" value=\""+msm.getString(2)+"\" ><button type=\"warning\" class=\"btn btn-warning btn-xs\">Editar</button></form>"+ "</td>";
           tabla+="</tr>";

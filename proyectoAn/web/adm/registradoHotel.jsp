@@ -11,15 +11,18 @@
     String slogan = request.getParameter("slog");
     String dir = request.getParameter("dir");
     int tel=Integer.parseInt(request.getParameter("tel"));
-    int cel=Integer.parseInt(request.getParameter("cel"));
-   
-    
+  long cel= Long.parseLong(request.getParameter("cel"));
+    String misi = request.getParameter("mision");
+    String visi = request.getParameter("vision");
+    String cara = request.getParameter("carac");
    datos.setNombre(nombre);
     datos.setSlogan(slogan);
     datos.setDir(dir);
     datos.setTel(tel);
     datos.setCel(cel);
-    System.out.println(datos.toString());
+    datos.setMision(misi);
+    datos.setVision(visi);
+    datos.setObj(cara);
     hotel.agregar(datos);
     
     /*System.out.println(msg);

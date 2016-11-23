@@ -12,7 +12,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse" >
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -45,9 +45,9 @@
 		</form>
 
             
-<div class="btn-group col-md-14 ">
-  <a class="btn btn-primary col-md-11" href="#"><i class="fa fa-database fa-lg"></i> Administrar Base de datos</a>
-  <a class="btn btn-primary dropdown-toggle col-md-1 " data-toggle="dropdown" href="#">
+<div class="btn-group col-md-14 " style="background: #e98e4c;">
+  <a class="btn btn-deep-orange col-md-11" href="#"><i class="fa fa-database fa-lg"></i> Administrar Base de datos</a>
+  <a class="btn btn-deep-orange dropdown-toggle col-md-1 " data-toggle="dropdown" href="#" style="background: #e98e4c;">
     <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
   </a>
   <ul class="dropdown-menu col-md-13">
@@ -71,14 +71,6 @@
   <br>
   <br>
   
-		<ul class="nav menu">
-			<li><a href="tables.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Inicio</a></li>
-                        <li><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Huespedes</a></li>
-			<li class="active"><a href="apartado.html"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Apartado</a></li>
-			<li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Cheking</a></li>
-			<li><a href="Datos_hotel.jsp"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Datos del Hotel</a></li>
-		
-				</ul>
 	</div><!--/.sidebar-->
 	
 </div>

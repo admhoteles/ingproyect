@@ -69,15 +69,14 @@ private clsConn cnn=new clsConn();
     }
         return opcion;
      }
-     
-    
-   public String Asignadas() throws SQLException{
+
+ public String Asignadas() throws SQLException{
        String sql="select e.id, e.nombres, e.apellidos, s.id_hab from empleados e join servicioaseo s on(e.id=s.id_emp);";
         ResultSet   msm= getCnn().consultaTabla(sql);
         
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
-                               "<tr>\n" +
+                               "<tr Style=\"background-color:  #ee9d73; color: white;\">" +
                                 "<th class=\"col text-center\">Identificacion Habitacion</th>\n" +
                                 "<th class=\"col text-center\">Empleado encargado</th>\n" +
                                 "<th class=\"col text-center\">Acciones</th>\n" +

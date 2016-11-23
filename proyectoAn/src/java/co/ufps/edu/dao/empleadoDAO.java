@@ -104,14 +104,14 @@ System.out.println(sql);
        String tabla="<div class=\"panel-footer table-responsive\"><table class=\"table table-striped\">\n" +
                             "<thead>\n" +
                                "<tr>\n" +
-                                "<th class=\"col text-center\">Id</th>\n" +
-                                "<th class=\"col text-center\">Nombres</th>\n" +
-                                "<th class=\"col text-center\">Contraseña</th>\n" +
-                                 "<th class=\"col text-center\">Email</th>\n" +
-                               "<th class=\"col text-center\">Cargo</th>\n" +
-                               "<th class=\"col text-center\">Cedula</th>\n" +
-                               "<th class=\"col text-center\">Telefono</th>\n" +
-                               "<th class=\"col text-center\">Acciones</th>\n" +
+                                "<th class=\"col text-center\"Style=\"background-color:  #ee9d73; color: white;\" >Id</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Nombres</th>\n" +
+                                "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Contraseña</th>\n" +
+                                 "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Email</th>\n" +
+                               "<th class=\"col text-center\"Style=\"background-color:  #ee9d73; color: white;\">Cargo</th>\n" +
+                               "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Cedula</th>\n" +
+                               "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Telefono</th>\n" +
+                               "<th class=\"col text-center\" Style=\"background-color:  #ee9d73; color: white;\">Acciones</th>\n" +
                                 "</tr>\n" +
                                    "\n" +"<tboby>";
        

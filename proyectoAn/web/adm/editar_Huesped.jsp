@@ -21,17 +21,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ACTUALIZACION DE EMPLEADO</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css.map" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.css.map" rel="stylesheet">
+        <link href="css/mdb.css" rel="stylesheet">
+        <link href="css/bootstrap-material-design.css" rel="stylesheet">
+        <link href="css/bootstrap-material-design.min.css.map" rel="stylesheet">
+        <link href="css/ripples.css" rel="stylesheet">
+        <link href="css/ripples.css.map" rel="stylesheet">
+        <link href="css/datepicker3.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <!--<link rel="stylesheet" type="text/css" href="css/ripples.min.css">-->
+        <link rel="stylesheet" type="text/css" href="js/toastr.css">
+        <!--Icons-->
+        <script src="js/lumino.glyphs.js"></script>
 
-<!--Icons-->
-<script src="js/lumino.glyphs.js"></script>
-
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
 
 </head>
 
@@ -126,8 +135,8 @@
  
 								<!-- Form actions -->
 								<div class="form-group">
-									<div class="col-md-12 widget-right btn btn-danger">
-										<button type="submit" class="btn btn-info btn-md pull-right">Modificar</button>
+									<div class="col-md-12 widget-right">
+										<button type="submit" class="btn btn-deep-orange btn-md pull-right">Modificar</button>
 									</div>
 								</div>
 							</fieldset>
@@ -152,13 +161,24 @@
  
 		  
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+	 <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/tether.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/material.js"></script>
+        <!--<script src="js/materialize.js"></script>
+
+        <script src="js/chart.min.js"></script>
+        <script src="js/chart-data.js"></script>
+        <script src="js/easypiechart.js"34></script>
+        <script src="js/easypiechart-data.js"></script>
+       
+        <!--<script src="js/material.js"></script>??????-->
+        <script src="js/ripples.js"></script>
+         <script src="js/bootstrap-datepicker.js"></script>
+        <script>function index() {
+           $.material.init();
+        }</script>
 	<script>
 		
 

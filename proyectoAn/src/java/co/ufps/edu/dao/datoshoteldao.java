@@ -48,17 +48,17 @@ return false;
     }
     
     public void ingresar(principal p){
-        String sql ="INSERT INTO hotel VALUES ('"+p.getNombre()+"','"+ p.getSlogan()+"','"+ p.getDir()+"',"+p.getTel()+","+p.getCel()+","+1+");";
+        String sql ="INSERT INTO hotel VALUES ('"+p.getNombre()+"','"+ p.getSlogan()+"','"+ p.getDir()+"',"+p.getTel()+","+p.getCel()+","+1+",'"+p.getMision()+"','"+p.getVision()+"','"+p.getObj()+"');";
         
        SQLException exe= getCnn().insertar(sql);
 
     }
     public void actualizar(principal p){
-        String sql ="UPDATE hotel SET Nombre='"+p.getNombre()+"',Slogan='"+ p.getSlogan()+"',Direccion='"+ p.getDir()+"',telefono="+p.getTel()+",celular="+p.getCel()+",id="+1+"WHERE id=1;";
+        String sql ="UPDATE hotel SET Nombre='"+p.getNombre()+"',Slogan='"+ p.getSlogan()+"',Direccion='"+ p.getDir()+"',telefono="+p.getTel()+",celular="+p.getCel()+",id="+1+",Mision='"+p.getMision()+"',vision='"+p.getVision()+"',obj='"+p.getObj()+"' WHERE id=1;";
  
 
        int exe= getCnn().actualizar(sql);
-       System.out.println("final :" +exe);
+   
        
     }
     
@@ -90,7 +90,7 @@ return false;
                                                     
 							
                                          
-                                                              +"<a class=\"list-group-item\" href=\"Datos_propiedadesHab.jsp\"><i class=\"fa fa-television fa-lg\" aria-hidden=\"true\"></i>&nbsp;Detalles fisicas de la habitacion</a>"
+                                                              +"<a class=\"list-group-item\" href=\"Datos_propiedadesHab.jsp\"><i class=\"fa fa-television fa-lg\" aria-hidden=\"true\"></i>&nbsp;Detalles de la habitacion</a>"
                                                       
 						+"</div>"
                                                 +"<div class=\"col-sm-3 col-lg-3 widget-left\">"
@@ -106,12 +106,31 @@ return false;
          return rta;
           }
        }
-       
+public principal datos(){
+    principal p= new principal();
+    ResultSet    msm= getCnn().consultaTabla("SELECT * From hotel;");
       
-       
-     
+    try {
+        while(msm.next()){
+             p.setNombre(msm.getString(1));
+             p.setSlogan(msm.getString(2));
+             p.setTel(msm.getInt(4));
+             p.setCel(msm.getLong(5));
+             p.setDir(msm.getString(3));
+             p.setObj(msm.getString(9));
+             p.setVision(msm.getString(8));
+             p.setMision(msm.getString(7));
+       System.out.print(p.getNombre());
+        }
+    } catch (SQLException ex) {
+        Logger.getLogger(datoshoteldao.class.getName()).log(Level.SEVERE, null, ex);
     }
-    
+        
+    return p;
+}
+ 
+    }
+
     
     
  
