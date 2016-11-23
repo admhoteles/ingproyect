@@ -23,6 +23,17 @@
         
         <html>
     <head>
+        
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        
+        
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -219,14 +230,15 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">Informacion Servicios Adicionales</div>
+					<div class="panel-heading">Servicios Al cuarto</div>
 					<div class="panel-body">
 						<table data-toggle="table" >
 						    <thead>
 						    <tr>
-						        <th data-field="id" data-align="right">Item ID</th>
-						        <th data-field="name">Item Name</th>
-						        <th data-field="price">Item Price</th>
+						        
+						        <th data-field="Servicios">  <%=f.getServicios()%></th>
+                                                        
+                                                     
 						    </tr>
 						    </thead>
 						</table>
@@ -235,7 +247,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">Huesped a Facturar</div>
+					<div class="panel-heading">Infrmacion del Huesped</div>
 					<div class="panel-body">
 						<table data-toggle="table" id="table-style"  data-row-style="rowStyle">
 						    <thead>
@@ -277,7 +289,8 @@
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/bootstrap-table.js"></script>
 	
-        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="material/js/materialize.min.js"></script>
         
     </body>
 </html>
