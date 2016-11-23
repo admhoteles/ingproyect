@@ -16,6 +16,7 @@ public class habitaciones {
   int tipo;
   int estado;
   String foto;
+  private String observacion;
   private clsConn cnn=new clsConn();
 
     public habitaciones() {
@@ -66,6 +67,16 @@ public class habitaciones {
         this.foto = foto;
     }
 
+    public String getObservacion() {
+        return observacion;
+    }
+
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "habitaciones{" + "id=" + id + ", tipo=" + tipo + ", estado=" + estado + ", foto=" + foto + '}';

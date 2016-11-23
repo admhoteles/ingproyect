@@ -17,9 +17,6 @@ public class principal {
     int tel;
     int cel;
     String dir;
-    String vision;
-    String mision;
-    String obj;
    
 
     public principal() {
@@ -64,30 +61,6 @@ public class principal {
 
     public void setDir(String dir) {
         this.dir = dir;
-    }
-
-    public String getVision() {
-        return vision;
-    }
-
-    public String getMision() {
-        return mision;
-    }
-
-    public String getObj() {
-        return obj;
-    }
-
-    public void setVision(String vision) {
-        this.vision = vision;
-    }
-
-    public void setMision(String mision) {
-        this.mision = mision;
-    }
-
-    public void setObj(String obj) {
-        this.obj = obj;
     }
 
     @Override
